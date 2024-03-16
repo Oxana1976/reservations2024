@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ArtistType;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,6 +22,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ArtistSeeder::class,
             UserSeeder::class,
+            TypeSeeder::class,
+            ArtistTypeSeeder::class,
         ]);
 
        
