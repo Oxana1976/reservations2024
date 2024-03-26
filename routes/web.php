@@ -3,7 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\LocalityController;
 use App\Http\Controllers\TypeController;
+use App\Http\Controllers\LocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +54,11 @@ Route::delete('/artist/{id}', [ArtistController::class, 'destroy'])
 Route::get('/type', [TypeController::class, 'index'])->name('type.index');
 Route::get('/type/{id}', [TypeController::class, 'show'])
 		->where('id', '[0-9]+')->name('type.show');
+
+Route::get('/locality', [LocalityController::class, 'index'])->name('locality.index');
+Route::get('/locality/{id}', [LocalityController::class, 'show'])
+		->where('id', '[0-9]+')->name('locality.show');
+
+Route::get('location', [LocationController::class, 'index'])->name('location_index');
+Route::get('location/{id}', [LocationController::class, 'show'])
+        ->where('id', '[0-9]+')->name('location_show');
