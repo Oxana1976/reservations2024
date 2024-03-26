@@ -30,4 +30,9 @@ class Location extends Model
     {
         return $this->hasMany(Show::class);
     }
+
+    public function representations(): HasMany
+    {
+        return $this->hasMany(Representation::class);
+    }
 }

@@ -27,6 +27,8 @@ class DatabaseSeeder extends Seeder
             LocalitySeeder::class,
             LocationSeeder::class,
             ShowSeeder::class,
+            RepresentationSeeder::class,
+            ArtistTypeShowSeeder::class,
         ]);
 
        
