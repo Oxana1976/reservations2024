@@ -18,7 +18,10 @@ class UserSeeder extends Seeder
     {
         //
         //Empty the table first
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
         User::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        
 
         //Define data
         $users = [
@@ -42,6 +45,29 @@ class UserSeeder extends Seeder
                 'created_at'=>'',
                 'role'=>'member',
             ],
+            [
+                'login'=>'oxana',
+                'firstname'=>'Oxana',
+                'lastname'=>'Eremeeva',
+                'email'=>'oxana.eremeeva@sull.com',
+                'password'=>'12345678',
+                'langue'=>'en',
+                'created_at'=>'',
+                'role'=>'admin',
+            ],
+
+            [
+                'login'=>'john',
+                'firstname'=>'John',
+                'lastname'=>'Smit',
+                'email'=>'john.smit@sull.com',
+                'password'=>'12345678',
+                'langue'=>'en',
+                'created_at'=>'',
+                'role'=>'affiliate',
+            ],
+
+          
         ];
         
         foreach($users as &$user) {
