@@ -8,6 +8,7 @@ use App\Http\Controllers\TypeController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\RepresentationController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,3 +74,7 @@ Route::get('/representation', [RepresentationController::class, 'index'])
     ->name('representation_index');
 Route::get('/representation/{id}', [RepresentationController::class, 'show'])
     ->where('id', '[0-9]+')->name('representation_show');
+
+Route::get('/role', [RoleController::class, 'index'])->name('role.index');
+Route::get('/role/{id}', [RoleController::class, 'show'])
+         ->where('id', '[0-9]+')->name('role.show');
