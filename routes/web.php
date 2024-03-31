@@ -9,7 +9,7 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\RepresentationController;
 use App\Http\Controllers\RoleController;
-
+use App\Http\Controllers\ReservationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -78,3 +78,7 @@ Route::get('/representation/{id}', [RepresentationController::class, 'show'])
 Route::get('/role', [RoleController::class, 'index'])->name('role.index');
 Route::get('/role/{id}', [RoleController::class, 'show'])
          ->where('id', '[0-9]+')->name('role.show');
+
+Route::get('/reservation', [ReservationController::class, 'index'])->name('reservation.index');
+Route::get('/reservation/{id}', [ReservationController::class, 'show'])
+             ->where('id', '[0-9]+')->name('reservation.show');
