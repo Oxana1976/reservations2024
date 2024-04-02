@@ -53,17 +53,35 @@ class TypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $type = Type::find($id);
+        
+        return view('type.edit',[
+            'type' => $type,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+	   //Validation des données du formulaire
+        $validated = $request->validate([
+            'type' => 'required|max:60',
+            
+        ]);
+
+	   //Le formulaire a été validé, nous récupérons le type à modifier
+        $type = Type::find($id);
+
+	   //Mise à jour des données modifiées et sauvegarde dans la base de données
+        $type->update($validated);
+
+        return view('type.show',[
+            'type' => $type,
+        ]);
     }
 
     /**

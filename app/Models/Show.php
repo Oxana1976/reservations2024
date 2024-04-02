@@ -37,4 +37,9 @@ class Show extends Model
     {
         return $this->hasMany(Representation::class);
     }
+
+    public function reviews(): HasMany
+    {
+        return $this->hasMany(Review::class);
+    }
 }

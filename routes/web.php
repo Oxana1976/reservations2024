@@ -10,6 +10,9 @@ use App\Http\Controllers\ShowController;
 use App\Http\Controllers\RepresentationController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ReviewController;
+use App\Models\Review;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,6 +60,11 @@ Route::delete('/artist/{id}', [ArtistController::class, 'destroy'])
 Route::get('/type', [TypeController::class, 'index'])->name('type.index');
 Route::get('/type/{id}', [TypeController::class, 'show'])
 		->where('id', '[0-9]+')->name('type.show');
+Route::get('/type/edit/{id}', [TypeController::class, 'edit'])
+        ->where('id', '[0-9]+')->name('type.edit');
+Route::put('/type/{id}', [TypeController::class, 'update'])
+        ->where('id', '[0-9]+')->name('type.update');
+        
 
 Route::get('/locality', [LocalityController::class, 'index'])->name('locality.index');
 Route::get('/locality/{id}', [LocalityController::class, 'show'])
@@ -82,3 +90,8 @@ Route::get('/role/{id}', [RoleController::class, 'show'])
 Route::get('/reservation', [ReservationController::class, 'index'])->name('reservation.index');
 Route::get('/reservation/{id}', [ReservationController::class, 'show'])
              ->where('id', '[0-9]+')->name('reservation.show');
+
+Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
+Route::get('/review/{id}', [ReviewController::class, 'show'])
+            ->where('id', '[0-9]+')->name('review.show');
+
