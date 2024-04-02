@@ -11,6 +11,7 @@ use App\Http\Controllers\RepresentationController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
+use App\Models\Locality;
 use App\Models\Review;
 
 /*
@@ -64,11 +65,15 @@ Route::get('/type/edit/{id}', [TypeController::class, 'edit'])
         ->where('id', '[0-9]+')->name('type.edit');
 Route::put('/type/{id}', [TypeController::class, 'update'])
         ->where('id', '[0-9]+')->name('type.update');
-        
+
 
 Route::get('/locality', [LocalityController::class, 'index'])->name('locality.index');
 Route::get('/locality/{id}', [LocalityController::class, 'show'])
 		->where('id', '[0-9]+')->name('locality.show');
+Route::get('/locality/edit/{id}', [LocalityController::class, 'edit'])
+		->where('id', '[0-9]+')->name('locality.edit');
+Route::put('/locality/{id}', [LocalityController::class, 'update'])
+		->where('id', '[0-9]+')->name('locality.update');
 
 Route::get('location', [LocationController::class, 'index'])->name('location_index');
 Route::get('location/{id}', [LocationController::class, 'show'])

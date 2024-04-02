@@ -11,6 +11,6 @@
         <li>{{ $location->designation }}</li>
     @endforeach
     </ul>
-
+    <div><a href="{{ route('locality.edit' ,$locality->id) }}">Modifier</a></div>
     <nav><a href="{{ route('locality.index') }}">Retour à l'index</a></nav>
 @endsection

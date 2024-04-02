@@ -54,17 +54,35 @@ class LocalityController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $locality = Locality::find($id);
+        
+        return view('locality.edit',[
+            'locality' => $locality,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+	   //Validation des données du formulaire
+        $validated = $request->validate([
+            'postal_code' => 'required|max:6',
+            'locality' => 'required|max:60',
+        ]);
+
+	   //Le formulaire a été validé, nous récupérons localité à modifier
+        $locality = Locality::find($id);
+
+	   //Mise à jour des données modifiées et sauvegarde dans la base de données
+        $locality->update($validated);
+
+        return view('locality.show',[
+            'locality' => $locality,
+        ]);
     }
 
     /**
