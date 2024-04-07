@@ -112,4 +112,10 @@ Route::get('/review/{id}', [ReviewController::class, 'show'])
 Route::get('/price', [PriceController::class, 'index'])->name('price.index');
 Route::get('/price/{id}', [PriceController::class, 'show'])
             ->where('id', '[0-9]+')->name('price.show');
+Route::get('/price/create', [PriceController::class, 'create'])->name('price.create');
+Route::post('/price', [PriceController::class, 'store'])->name('price.store');
+Route::put('/price/{id}', [PriceController::class, 'update'])
+		->where('id', '[0-9]+')->name('price.update');
+Route::get('/price/edit/{id}', [PriceController::class, 'edit'])
+		->where('id', '[0-9]+')->name('price.edit');
 

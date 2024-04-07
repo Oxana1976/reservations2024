@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Representation extends Model
 {
     use HasFactory;
@@ -30,5 +30,10 @@ class Representation extends Model
     public function show():  BelongsTo
     {
         return $this->belongsTo(Show::class);
+    }
+
+    public function reservations(): BelongsToMany
+    {
+        return $this->belongsToMany(Reservation::class);
     }
 }

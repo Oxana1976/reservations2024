@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             ReservationSeeder::class,
             ReviewSeeder::class,
             PriceSeeder::class,
+            ReservationRepresentationSeeder::class,
         ]);
 
        

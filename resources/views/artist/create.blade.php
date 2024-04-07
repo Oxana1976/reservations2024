@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
-@section('title', 'Modifier un artiste')
+@section('title', 'Ajouter un artist')
 
 @section('content')
-    <h2>Modifier un artiste</h2>
+    <h2>Ajouter un artiste</h2>
 
     <form action="{{ route('artist.store') }}" method="post">
 
