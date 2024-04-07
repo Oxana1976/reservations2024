@@ -33,7 +33,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'ayiti.jpg',
                         'location_slug'=>'espace-delvaux-la-venerie',
                         'bookable'=>true,
-                        'price'=>8.50,
+                        //'price'=>8.50,
+                        'duration' => 120,
                     ],
                    [
                         'slug'=>null,
@@ -43,7 +44,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'cible.jpg',
                         'location_slug'=>'dexia-art-center',
                         'bookable'=>true,
-                        'price'=>9.00,
+                        //'price'=>9.00,
+                        'duration' => 160,
                     ],
                     [
                         'slug'=>null,
@@ -55,7 +57,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'claudebelgesaison220.jpg',
                         'location_slug'=>null,
                         'bookable'=>false,
-                        'price'=>5.50,
+                        //'price'=>5.50,
+                        'duration' => 180,
                     ],
                     [
                         'slug'=>null,
@@ -65,7 +68,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'wayburn.jpg',
                         'location_slug'=>'la-samaritaine',
                         'bookable'=>true,
-                        'price'=>10.50,
+                        //'price'=>10.50,
+                        'duration' => 90,
                     ],
 
                     [
@@ -77,7 +81,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'lostwords.jpg',
                         'location_slug'=>'arenberg',
                         'bookable'=>true,
-                        'price'=>20.50,
+                        //'price'=>20.50,
+                        'duration' => 140,
                     ],
                     [
                         'slug'=>null,
@@ -88,7 +93,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'voisenoise.jpg',
                         'location_slug'=>'de-singel',
                         'bookable'=>true,
-                        'price'=>15.50,
+                        //'price'=>15.50,
+                        'duration' => 160,
                     ],
 
                     [
@@ -100,7 +106,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'ombra.jpg',
                         'location_slug'=>'opera-de-flandre-Gand',
                         'bookable'=>true,
-                        'price'=>32.50,
+                        //'price'=>32.50,
+                        'duration' => 120,
                     ],
                     [
                         'slug'=>null,
@@ -111,7 +118,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'recreation.jpg',
                         'location_slug'=>'le-delta',
                         'bookable'=>true,
-                        'price'=>30.00,
+                        //'price'=>30.00,
+                        'duration' => 60,
                     ],
 
                     [
@@ -123,7 +131,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'ordrebizarre.jpg',
                         'location_slug'=>'kulturfabrik',
                         'bookable'=>true,
-                        'price'=>18.00,
+                        //'price'=>18.00,
+                        'duration' => 100,
                     ],
 
                     [
@@ -136,7 +145,8 @@ class ShowSeeder extends Seeder
                         'poster_url'=>'meteor.jpg',
                         'location_slug'=>'360-Paris-Music-Factory',
                         'bookable'=>true,
-                        'price'=>45.00,
+                        //'price'=>45.00,
+                        'duration' => 140,
                     ],
 
                     [
@@ -148,7 +158,8 @@ class ShowSeeder extends Seeder
                           
                         'poster_url'=>'jokair.jpg',
                         'location_slug'=>'accor-arena',
-                        'price'=>45.00,
+                        //'price'=>45.00,
+                        'duration' => 150,
                     ],
                 ];
 

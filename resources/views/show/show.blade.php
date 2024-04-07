@@ -16,7 +16,9 @@
         <p><strong>Lieu de création:</strong> {{ $show->location->designation }}</p>
         @endif
 
-        <p><strong>Prix:</strong> {{ $show->price }} €</p>
+        
+        <p><strong>Duration:</strong> {{ intdiv($show->duration, 60) }}h {{ $show->duration % 60 }}min</p>
+
         
         @if($show->bookable)
         <p><em>Réservable</em></p>

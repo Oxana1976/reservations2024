@@ -53,17 +53,37 @@ class LocationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $location = Location::find($id);
+        
+        return view('location.edit',[
+            'location' => $location,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+	   //Validation des données du formulaire
+        $validated = $request->validate([
+            'designation' => 'required|max:60',
+            'address' => 'required|max:255',
+            'website' => 'required|url:http,https',
+            'phone' => 'required|max:30',
+        ]);
+
+	   //Le formulaire a été validé, nous récupérons l’artiste à modifier
+        $location = Location::find($id);
+
+	   //Mise à jour des données modifiées et sauvegarde dans la base de données
+        $location->update($validated);
+
+        return view('location.show',[
+            'location' => $location,
+        ]);
     }
 
     /**

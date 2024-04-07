@@ -18,7 +18,7 @@ class Show extends Model
         'poster_url',
         'location_id',
         'bookable',
-        'price',
+        'duration',
     ];
     protected $table ='shows';
     public $timestamps = true;

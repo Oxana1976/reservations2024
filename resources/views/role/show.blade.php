@@ -9,6 +9,6 @@
         <li>{{ $user->firstname }} {{ $user->lastname }}</li>
     @endforeach
     </ul>
-        
+    <div><a href="{{ route('role.edit' ,$role->id) }}">Modifier</a></div>    
     <nav><a href="{{ route('role.index') }}">Retour à l'index</a></nav>
 @endsection

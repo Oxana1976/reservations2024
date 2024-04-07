@@ -75,9 +75,13 @@ Route::get('/locality/edit/{id}', [LocalityController::class, 'edit'])
 Route::put('/locality/{id}', [LocalityController::class, 'update'])
 		->where('id', '[0-9]+')->name('locality.update');
 
-Route::get('location', [LocationController::class, 'index'])->name('location_index');
+Route::get('location', [LocationController::class, 'index'])->name('location.index');
 Route::get('location/{id}', [LocationController::class, 'show'])
-        ->where('id', '[0-9]+')->name('location_show');
+        ->where('id', '[0-9]+')->name('location.show');
+Route::get('/location/edit/{id}', [LocationController::class, 'edit'])
+		->where('id', '[0-9]+')->name('location.edit');
+Route::put('/location/{id}', [LocationController::class, 'update'])
+		->where('id', '[0-9]+')->name('location.update');
 
 Route::get('/show', [ShowController::class, 'index'])->name('show.index');
 Route::get('/show/{id}', [ShowController::class, 'show'])
@@ -91,6 +95,10 @@ Route::get('/representation/{id}', [RepresentationController::class, 'show'])
 Route::get('/role', [RoleController::class, 'index'])->name('role.index');
 Route::get('/role/{id}', [RoleController::class, 'show'])
          ->where('id', '[0-9]+')->name('role.show');
+Route::get('/role/edit/{id}', [RoleController::class, 'edit'])
+         ->where('id', '[0-9]+')->name('role.edit');
+Route::put('/role/{id}', [RoleController::class, 'update'])
+         ->where('id', '[0-9]+')->name('role.update');
 
 Route::get('/reservation', [ReservationController::class, 'index'])->name('reservation.index');
 Route::get('/reservation/{id}', [ReservationController::class, 'show'])
