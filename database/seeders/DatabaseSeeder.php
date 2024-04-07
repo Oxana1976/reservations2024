@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             UserRoleSeeder::class,
             ReservationSeeder::class,
             ReviewSeeder::class,
+            PriceSeeder::class,
         ]);
 
        
