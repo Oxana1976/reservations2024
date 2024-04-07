@@ -11,6 +11,7 @@ use App\Http\Controllers\RepresentationController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\PriceController;
 use App\Models\Locality;
 use App\Models\Review;
 
@@ -107,4 +108,8 @@ Route::get('/reservation/{id}', [ReservationController::class, 'show'])
 Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
 Route::get('/review/{id}', [ReviewController::class, 'show'])
             ->where('id', '[0-9]+')->name('review.show');
+
+Route::get('/price', [PriceController::class, 'index'])->name('price.index');
+Route::get('/price/{id}', [PriceController::class, 'show'])
+            ->where('id', '[0-9]+')->name('price.show');
 
