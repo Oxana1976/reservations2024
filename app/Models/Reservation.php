@@ -26,6 +26,12 @@ class Reservation extends Model
 
     public function represenations(): BelongsToMany
     {
-        return $this->belongsToMany(Representation::class);
+        return $this->belongsToMany(Representation::class, 'reservation_representation', 'reservation_id', 'representation_id')
+                    ->withPivot('quantity', 'price_id');
+    }
+    
+    public function getPriceAttribute()
+    {   
+    return Price::find($this->pivot->price_id);
     }
 }

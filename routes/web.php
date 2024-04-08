@@ -93,6 +93,7 @@ Route::get('/representation', [RepresentationController::class, 'index'])
 Route::get('/representation/{id}', [RepresentationController::class, 'show'])
     ->where('id', '[0-9]+')->name('representation_show');
 
+
 Route::get('/role', [RoleController::class, 'index'])->name('role.index');
 Route::get('/role/{id}', [RoleController::class, 'show'])
          ->where('id', '[0-9]+')->name('role.show');

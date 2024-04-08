@@ -34,6 +34,8 @@ class Representation extends Model
 
     public function reservations(): BelongsToMany
     {
-        return $this->belongsToMany(Reservation::class);
+        return $this->belongsToMany(Reservation::class , 'reservation_representation', 'representation_id', 'reservation_id')
+        ->withPivot('quantity','price_id');
+        
     }
 }

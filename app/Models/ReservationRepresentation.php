@@ -30,7 +30,7 @@ class ReservationRepresentation extends Model
     }
     public function price(): BelongsTo 
     {
-        return $this->belongsTo(Price::class);
+        return $this->belongsTo(Price::class, 'price_id');
     }
     
 }

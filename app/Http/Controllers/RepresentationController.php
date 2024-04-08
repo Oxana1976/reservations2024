@@ -44,6 +44,7 @@ class RepresentationController extends Controller
     public function show(string $id)
     {
         //
+        
         $representation = Representation::find($id);
         $date = Carbon::parse($representation->when)->format('d/m/Y');
         $time = Carbon::parse($representation->when)->format('G:i');

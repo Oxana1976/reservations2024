@@ -7,10 +7,10 @@
 
     <ul>
     @foreach($representations as $representation)
-    <li><a href="{{ route('representation_show', $representation->id)}}">{{ $representation->show->title }}</a>
+    <li><strong>Spectacle:</strong><a href="{{ route('representation_show', $representation->id)}}">{{ $representation->show->title }}</a>
 
         @if($representation->location)
-        - <span>{{ $representation->location->designation }}</span>
+        - <span><strong>Lieu:</strong>{{ $representation->location->designation }}</span>
         @endif
         - <datetime>{{ substr($representation->when,0,-3) }}</datetime>
     </li>
