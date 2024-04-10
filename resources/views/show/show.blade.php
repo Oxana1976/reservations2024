@@ -49,6 +49,7 @@
                 @else
                 (lieu à déterminer)
                 @endif
+                <button>Réserver</button>
                 </li>
             @endforeach
         </ul>
